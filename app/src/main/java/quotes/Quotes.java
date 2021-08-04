@@ -4,6 +4,8 @@ public class Quotes {
     //Declare variables
     private String author;
     private String text;
+    private String content;
+    private String authorSlug;
 
     //Constructor
     public Quotes(String author, String text){
@@ -12,12 +14,22 @@ public class Quotes {
     }
     public Quotes(){}
 
+    public Quotes(String author, String content, String authorSlug){
+        this.author=author;
+        this.content=content;
+        this.authorSlug=authorSlug;
+    }
+
     @Override
     public String toString() {
+        if (text==null)
         return "Quotes{" +
                 "author='" + author + '\'' +
-                ", text='" + text + '\'' +
-                '}';
+                ", text='" + content + '\'';
+        else
+            return "Quotes{" +
+                    "author='" + author + '\'' +
+                    ", text='" + text + '\'';
     }
 
     //Getter:
@@ -35,5 +47,21 @@ public class Quotes {
 
     public void setText(String text) {
         this.text = text;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public String getAuthorSlug() {
+        return authorSlug;
+    }
+
+    public void setAuthorSlug(String authorSlug) {
+        this.authorSlug = authorSlug;
     }
 }

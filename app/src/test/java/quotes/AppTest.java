@@ -18,7 +18,7 @@ class AppTest {
         try {
             Reader reader = new FileReader("../app/src/main/resources/data.json");
             Quotes[] q1 = gson.fromJson(reader,Quotes[].class);
-            System.out.println(q1[0].toString());
+//            System.out.println(q1[0].toString());
             assertEquals("Marilyn Monroe",q1[0].getAuthor());
         } catch (FileNotFoundException e) {
             e.printStackTrace();
